@@ -13,5 +13,6 @@ require 'ostruct'
 def mocked_response
   o = OpenStruct.new
   o.body = File.read "#{File.dirname(__FILE__)}/response_mock.html"
+  o.status = 200
   o
 end
