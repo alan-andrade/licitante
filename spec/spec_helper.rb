@@ -6,3 +6,12 @@ RSpec.configure do |config|
   config.filter_run :focus
   config.order = 'random'
 end
+
+
+require 'ostruct'
+
+def mocked_response
+  o = OpenStruct.new
+  o.body = File.read "#{File.dirname(__FILE__)}/response_mock.html"
+  o
+end
